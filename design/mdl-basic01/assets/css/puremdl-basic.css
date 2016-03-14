@@ -1,0 +1,247 @@
+/* Basic styles for Hootmarket Pure MDL Template */
+.hootmarket-logo-image {
+	height:28px;
+}
+
+.mdl-layout__drawer .mdl-layout-title {
+	background-color:rgb(63,81,181); color:#FFF;
+}
+
+.hmarket-header-row-tools {
+	height:28px;
+	border-bottom:1px solid #999;
+}
+
+.mdl-navigation__link {
+	font-size:14px;
+	font-weight:700;
+}
+  .hmarket-navigation-container {
+    /* Simple hack to make the overflow happen to the left instead... */
+    direction: rtl;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 500px;
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+        width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .hmarket-navigation {
+    /* ... and now make sure the content is actually LTR */
+    direction: ltr;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 800px;
+  }
+  
+  .hmarket-search-box.is-focused + .hmarket-navigation-container {
+    opacity: 0;
+    width: 130px;
+  }
+
+  .hmarket-navigation .mdl-navigation__link {
+    display: inline-block;
+    height: 60px;
+    line-height: 68px;
+    background-color: transparent !important;
+    border-bottom: 3px solid transparent;
+  }
+
+    .hmarket-navigation .mdl-navigation__link:hover {
+      border-bottom: 3px solid #CCC;
+    }
+
+  .hmarket-search-box {
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  .hmarket-search-box .mdl-textfield__input {
+	  border-bottom:1px solid #999;
+  }
+
+  .hmarket-more-button {
+    -webkit-order: 3;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  
+.hmarket-drawer-logo-image {
+	height:20px;
+}
+
+.hmarket-slide-section {
+  position: relative;
+  height: 350px;
+  width: auto;
+  padding-left:80px;
+  background-color: #f3f3f3;
+  background: url('../../assets/images/slides/shopping_young_guy.jpg') center 30% no-repeat;
+  background-size: cover;
+}
+	.hmarket-slide-section .hmarket-title-slide {
+		padding-top:100px; padding-bottom:0px; margin:0;
+		font:54px/58px "Montserrat", Helvetica, Arial, sans-serif; font-weight:normal;
+	}
+	.hmarket-slide-section .hmarket-sub-title-slide {
+		padding-top:10px; margin:0; margin-bottom:20px;
+		font:18px/22px "Montserrat", Helvetica, Arial, sans-serif; font-weight:500;
+	}
+
+.hmarket-section .fixed-width {
+	max-width:980px;
+	margin:0 auto;
+}
+
+/* Menú Secundario */
+.hmarket-list {
+	
+}
+  .hmarket-list h5 {
+    margin-bottom:0;
+  }
+  .hmarket-list ul {
+    margin-top:0;
+  }
+
+/* Cards */
+.hmarket-card-container {
+}
+
+  .hmarket-card-container .mdl-card__media {
+    overflow: hidden;
+    background: transparent;
+  }
+
+    .hmarket-card-container .mdl-card__media img {
+      width: 100%;
+    }
+  .hmarket-card-container .mdl-card__title, .hmarket-card-container .mdl-card__title-text {
+	display:block;
+  }
+  .hmarket-card-container .mdl-card__supporting-text {
+	  padding-bottom:56px;
+  }
+  .hmarket-card-container .mdl-card__actions {
+	  position:absolute;
+	  bottom:0;
+  }
+  .hmarket-card > .mdl-card__actions {
+	  display: flex;
+	  box-sizing:border-box;
+	  align-items: center;
+  }
+
+/* Footer */
+.mdl-mini-footer {
+	padding-top:16px; padding-bottom:16px;
+}
+	.mdl-mini-footer__social-btn {
+		background-color:#CCC;
+	}
+	.mdl-mini-footer__social-btn .mdi {
+		font-size:24px; line-height:24px;
+		color:#333;
+	}
+	
+/* Estilos de texto */
+html,body {
+	font-family:"Helvetica","Arial",sans-serif;
+	font-size:14px;
+	font-weight:400;
+	line-height:20px 
+}
+h1,h2,h3,h4,h5,h6,p {
+	margin:0; padding:0
+}
+h1 small,h2 small,h3 small,h4 small,h5 small,h6 small {
+	font-family:"Montserrat","Helvetica","Arial",sans-serif;
+	font-size:56px;
+	font-weight:400;
+	line-height:1.35;
+	letter-spacing:-0.03em;
+	opacity:0.54;
+	font-size:0.6em 
+}
+h1 {
+	font-family:"Montserrat","Helvetica","Arial",sans-serif;
+	font-size:56px;
+	font-weight:400;
+	line-height:1.35;
+	letter-spacing:-0.05em;
+	margin-top:24px;
+	margin-bottom:24px
+}
+h2 {
+	font-family:"Montserrat","Helvetica","Arial",sans-serif;
+	font-size:45px;
+	font-weight:400;
+	letter-spacing:-0.05em;
+	line-height:48px;
+	margin-top:24px;
+	margin-bottom:24px
+}
+h3 {
+	font-family:"Montserrat","Helvetica","Arial",sans-serif;
+	font-size:34px;
+	font-weight:400;
+	line-height:40px;
+	margin-top:24px;
+	margin-bottom:24px
+}
+h4 {
+	font-family:"Montserrat","Helvetica","Arial",sans-serif;
+	font-size:24px;
+	font-weight:400;
+	line-height:32px;
+	-moz-osx-font-smoothing:grayscale;
+	margin-top:24px;
+	margin-bottom:16px
+}
+h5 {
+	font-family:"Montserrat","Helvetica","Arial",sans-serif;
+	font-size:20px;
+	font-weight:500;
+	line-height:1;
+	letter-spacing:0.02em;
+	margin-top:24px;
+	margin-bottom:16px
+}
+h6 {
+	font-family:"Montserrat","Helvetica","Arial",sans-serif;
+	font-size:16px;
+	font-weight:400;
+	line-height:24px;
+	letter-spacing:0.04em;
+	margin-top:24px;
+	margin-bottom:16px
+}
+p {
+	font-size:14px;
+	font-weight:400;
+	line-height:24px;
+	letter-spacing:0;
+	margin-bottom:16px
+}
+a {
+	color:rgb(255,64,129);
+	font-weight:500
+}
+blockquote {
+	font-family:"Montserrat","Helvetica","Arial",sans-serif;
+	position:relative;
+	font-size:24px;
+	font-weight:300;
+	font-style:italic;
+	line-height:1.35;
+	letter-spacing:0.08em
+}
+blockquote:before {
+	position:absolute;
+	left:-0.5em;
+	content:'â€œ'
+}
+blockquote:after {content:'â€';margin-left:-0.05em}
