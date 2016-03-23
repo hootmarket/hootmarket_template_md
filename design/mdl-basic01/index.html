@@ -11,42 +11,34 @@
 <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="assets/mdi/css/materialdesignicons.min.css" media="all" type="text/css" />
-<link rel="stylesheet" href="https://code.getmdl.io/1.1.2/material.indigo-pink.min.css" />
+<link rel="stylesheet" href="https://code.getmdl.io/1.1.2/material.blue-indigo.min.css" />
 <script defer src="https://code.getmdl.io/1.1.1/material.min.js"></script>
 <link rel="stylesheet" href="assets/css/puremdl-basic.css" />
 </head>
 
 <body>
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--no-desktop-drawer-button">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
       <!-- Title -->
       <span class="mdl-layout-title">
-        <img class="hootmarket-logo-image" src="images/logo-hootmarket-light.png">
+        <img class="hootmarket-logo-image" src="images/logo-hootmarket.png">
       </span>
       <div class="mdl-layout-spacer"></div>
-      <div class="hmarket-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
-        <label class="mdl-button mdl-js-button mdl-button--icon" for="search-product">
+      <div class=" mdl-button--accent">
+        <span class="mdl-button mdl-button--icon">
           <i class="material-icons">search</i>
-        </label>
-        <div class="mdl-textfield__expandable-holder">
-          <input class="mdl-textfield__input" type="text" id="search-product">
-        </div>
+        </span>
       </div>
-      <!-- Navigation. We hide it in small screens. -->
-      <div class="hmarket-navigation-container">
-        <nav class="hmarket-navigation mdl-navigation mdl-layout--large-screen-only">
-          <a class="mdl-navigation__link" href="">Home</a>
-          <a class="mdl-navigation__link" href="">About</a>
-          <a class="mdl-navigation__link" href="">New</a>
-          <a class="mdl-navigation__link" href="">Collections</a>
-          <a class="mdl-navigation__link" href="">Blog</a>
-          <a class="mdl-navigation__link" href="">Contact</a>
-        </nav>
+      <div class="hmarket-search-box mdl-textfield mdl-js-textfield mdl-textfield--align-right">
+        <form action="#">
+          <input class="mdl-textfield__input" type="text" id="bigsearch">
+          <label class="mdl-textfield__label" for="bigsearch">Text...</label>
+        </form>
       </div>
     </div>
   </header>
-  <div class="mdl-layout__drawer mdl-layout--small-screen-only">
+  <div class="mdl-layout__drawer">
     <span class="mdl-layout-title">
       <img class="hmarket-drawer-logo-image" src="images/logo-hootmarket-light.png">
     </span>
@@ -64,7 +56,6 @@
     <div class="hmarket-slide-section">
       <h1 class="logo-font hmarket-title-slide">Tu espacio con <strong>Hootmarket</strong></h1>
       <h3 class="logo-font hmarket-sub-title-slide">Produce, promociona, comercializa</h3>
-
       <a href="#">
         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
           Conozca más
@@ -81,7 +72,7 @@
       </div>
       <div class="mdl-grid fixed-width">
         <!-- Secondary Navigation -->
-        <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-tablet  mdl-cell--12-col-phone">
+        <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--12-col-phone">
           <!-- List -->
           <h5>Categories</h5>
           <ul class="mdl-list">
@@ -97,85 +88,99 @@
             <li class="mal-list__item"><a href="#" class="mdl-navigation__link">Categoria Num 3</a></li>
           </ul>
         </div>
-        <div class="hmarket-card-container mdl-cell mdl-cell--10-col mdl-cell--8-col-tablet  mdl-cell--12-col-phone">
+        <div class="hmarket-card-container mdl-cell mdl-cell--10-col mdl-cell--10-col-tablet  mdl-cell--12-col-phone">
           <div class="mdl-grid">
             <!-- Product 1 -->
-            <div class="hmarket-card mdl-card mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet   mdl-cell--12-col-phone mdl-shadow--2dp">
+            <div class="hmarket-card mdl-card mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet   mdl-cell--12-col-phone mdl-shadow--2dp">
               <figure class="mdl-card__media">
-                <img src="images/products/sueter01.jpg" alt="" />
+                <a href="#"><img src="images/products/sueter01.jpg" alt="Gymboree Boys' Blue Sleeve Stripe Hooded Henley" /></a>
               </figure>
               <div class="mdl-card__title">
-                <h1 class="mdl-card__title-text">Gymboree Boys' Blue Sleeve Stripe Hooded Henley</h1>
+                <h1 class="mdl-card__title-text"><a href="#">Gymboree Boys' Blue Sleeve Stripe Hooded Henley</a></h1>
               </div>
               <div class="mdl-card__supporting-text">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam accusamus, consectetur.</p>
               </div>
               <div class="mdl-card__actions mdl-card--border">
-                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                  Add to cart
-                </a>
+                <div class="mdl-layout-spacer"></div>
+                <div class="cardLink">
+                  <a href="#">
+                    VISIT
+                  </a>
+                </div>
+                <div class="mdl-layout-spacer"></div>
               </div>
               <div class="mdl-card__menu">
-                <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-                  <i class="material-icons">share</i>
-                </button>
+                <a href="#">
+                  <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                    <i class="material-icons">share</i>
+                  </button>
+                </a>
               </div>
             </div>
             <!-- End Product 1 -->
             <!-- Product 2 -->
-            <div class="hmarket-card mdl-card mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet   mdl-cell--12-col-phone mdl-card mdl-shadow--2dp">
+            <div class="hmarket-card mdl-card mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet   mdl-cell--12-col-phone mdl-card mdl-shadow--2dp">
               <figure class="mdl-card__media">
-                <img src="images/products/sueter02.jpg" alt="" />
+                <a href="#"><img src="images/products/sueter02.jpg" alt="French Toast Boys' Football Tee" /></a>
               </figure>
               <div class="mdl-card__title">
-                <h1 class="mdl-card__title-text">French Toast Boys' Football Tee</h1>
+                <h1 class="mdl-card__title-text"><a href="#">French Toast Boys' Football Tee</a></h1>
               </div>
               <div class="mdl-card__supporting-text">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam accusamus, consectetur. Lorem ipsum dolor sit amet.</p>
-                <div class="mdl-typography--text-center">
-                  <a href="#">
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-                      ADD TO CART
-                    </button>
-                  </a>
-                </div>
               </div>
               <div class="mdl-card__actions mdl-card--border">
                 <div class="mdl-layout-spacer"></div>
-                <div class="mdl-button">
-    			  <a href="#">Visit</a>
+                <div class="cardLink">
+                  <a href="#">
+                    VISIT
+                  </a>
                 </div>
                 <div class="mdl-layout-spacer"></div>
- 			  </div>
+              </div>
+              <div class="mdl-card__menu cardLink">
+                <a href="#">
+                  <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                    <i class="material-icons">share</i>
+                  </button>
+                </a>
+              </div>
             </div>
             <!-- End Product 2 -->
             <!-- Product 3 -->
-            <div class="hmarket-card mdl-card mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet   mdl-cell--12-col-phone mdl-card mdl-shadow--2dp">
+            <div class="hmarket-card mdl-card mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet   mdl-cell--12-col-phone mdl-card mdl-shadow--2dp">
               <figure class="mdl-card__media">
                 <img src="images/products/conjunto-franela-pantalon.jpg" alt="" />
               </figure>
               <div class="mdl-card__title">
-                <h1 class="mdl-card__title-text">Product Name</h1>
+                <h1 class="mdl-card__title-text"><a href="#" target="_blank">Nautica Little Boys' Two Piece Stripe Tee Set with Solid Bottom</a></h1>
               </div>
               <div class="mdl-card__supporting-text">
-                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam accusamus, consectetur. Lorem ipsum dolor sit amet.</div>
-                <div class="mdl-typography--text-center">
+                <p>Nautica two piece set stripe tee set with solid bottom.</p>
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+                <div class="mdl-layout-spacer"></div>
+                <div class="cardLink">
                   <a href="#">
                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-                      ADD TO CART
+                      VISIT
                     </button>
                   </a>
                 </div>
-              </div>
-              <div class="mdl-card__actions mdl-card--border">
-                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Read More</a>
                 <div class="mdl-layout-spacer"></div>
-                <button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">favorite</i></button>
+              </div>
+              <div class="mdl-card__menu">
+                <a href="#">
+                  <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                    <i class="material-icons">share</i>
+                  </button>
+                </a>
               </div>
             </div>
             <!-- End Product 3 -->
             <!-- Product 4 -->
-            <div class="hmarket-card mdl-card mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet   mdl-cell--12-col-phone mdl-card mdl-shadow--2dp">
+            <div class="hmarket-card mdl-card mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet   mdl-cell--12-col-phone mdl-card mdl-shadow--2dp">
               <figure class="mdl-card__media">
                 <img src="images/products/conjunto-franela-pantalon-jean.jpg" alt="" />
               </figure>
@@ -186,14 +191,27 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam accusamus, consectetur. Lorem ipsum dolor sit amet.</p>
               </div>
               <div class="mdl-card__actions mdl-card--border">
-                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Read More</a>
                 <div class="mdl-layout-spacer"></div>
-                <button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">favorite</i></button>
+                <div class="cardLink">
+                  <a href="#">
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                      VISIT
+                    </button>
+                  </a>
+                </div>
+                <div class="mdl-layout-spacer"></div>
+              </div>
+              <div class="mdl-card__menu">
+                <a href="#">
+                  <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                    <i class="material-icons">share</i>
+                  </button>
+                </a>
               </div>
             </div>
             <!-- End Product 4 -->
             <!-- Product 5 -->
-            <div class="hmarket-card mdl-card mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet   mdl-cell--12-col-phone mdl-card mdl-shadow--2dp">
+            <div class="hmarket-card mdl-card mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet   mdl-cell--12-col-phone mdl-card mdl-shadow--2dp">
               <figure class="mdl-card__media">
                 <img src="images/products/conjunto-deportivo-franela-pantalon.jpg" alt="" />
               </figure>
@@ -202,23 +220,29 @@
               </div>
               <div class="mdl-card__supporting-text">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam accusamus, consectetur. Lorem ipsum dolor sit amet.</p>
-                <div class="mdl-typography--text-center">
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+                <div class="mdl-layout-spacer"></div>
+                <div class="cardLink">
                   <a href="#">
                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-                      ADD TO CART
+                      VISIT
                     </button>
                   </a>
                 </div>
-              </div>
-              <div class="mdl-card__actions mdl-card--border">
-                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Read More</a>
                 <div class="mdl-layout-spacer"></div>
-                <button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">favorite</i></button>
+              </div>
+              <div class="mdl-card__menu">
+                <a href="#">
+                  <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                    <i class="material-icons">share</i>
+                  </button>
+                </a>
               </div>
             </div>
             <!-- End Product 5 -->
             <!-- Product 6 -->
-            <div class="hmarket-card mdl-card mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet   mdl-cell--12-col-phone mdl-card mdl-shadow--2dp">
+            <div class="hmarket-card mdl-card mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet   mdl-cell--12-col-phone mdl-card mdl-shadow--2dp">
               <figure class="mdl-card__media">
                 <img src="images/products/sueter03.jpg" alt="" />
               </figure>
@@ -229,9 +253,22 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam accusamus, consectetur. Lorem ipsum dolor sit amet.</p>
               </div>
               <div class="mdl-card__actions mdl-card--border">
-                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Read More</a>
                 <div class="mdl-layout-spacer"></div>
-                <button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">favorite</i></button>
+                <div class="cardLink">
+                  <a href="#">
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                      VISIT
+                    </button>
+                  </a>
+                </div>
+                <div class="mdl-layout-spacer"></div>
+              </div>
+              <div class="mdl-card__menu">
+                <a href="#">
+                  <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                    <i class="material-icons">share</i>
+                  </button>
+                </a>
               </div>
             </div>
             <!-- End Product 6 -->
@@ -255,15 +292,21 @@
         </ul>
       </div>
       <div class="mdl-mini-footer__right-section">
-        <button class="mdl-mini-footer__social-btn">
-          <i class="mdi mdi-facebook"></i>
-        </button>
-        <button class="mdl-mini-footer__social-btn">
-          <i class="mdi mdi-twitter"></i>
-        </button>
-        <button class="mdl-mini-footer__social-btn">
-          <i class="mdi mdi-instagram"></i>
-        </button>
+        <a href="#" target="_blank">
+          <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--fab">
+  		    <i class="mdi mdi-facebook"></i>
+		  </button>
+        </a>
+        <a href="#" target="_blank">
+          <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--fab">
+  		    <i class="mdi mdi-twitter"></i>
+		  </button>
+        </a>
+        <a href="#" target="_blank">
+          <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--fab">
+  		    <i class="mdi mdi-instagram"></i>
+		  </button>
+        </a>
       </div>
     </footer>
   </main>

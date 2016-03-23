@@ -1,4 +1,16 @@
+/* Generic Styles */
+img {
+	border:none;
+}
+
 /* Basic styles for Hootmarket Pure MDL Template */
+.mdl-layout__header /*header-color-overwrite */ {
+	background-color:#FFF;
+}
+	.mdl-layout__header .mdl-layout__drawer-button {
+		color:#000;
+	}
+
 .hootmarket-logo-image {
 	height:28px;
 }
@@ -114,14 +126,20 @@
   .hmarket-card-container .mdl-card__media {
     overflow: hidden;
     background: transparent;
+	text-align:center;
+	height:160px;
   }
 
     .hmarket-card-container .mdl-card__media img {
-      width: 100%;
+      max-width: 100%;
+	  max-height:160px; /* */
     }
   .hmarket-card-container .mdl-card__title, .hmarket-card-container .mdl-card__title-text {
 	display:block;
   }
+	  .hmarket-card-container .mdl-card__title a {
+		text-decoration:none;
+	  }
   .hmarket-card-container .mdl-card__supporting-text {
 	  padding-bottom:56px;
   }
@@ -129,10 +147,18 @@
 	  position:absolute;
 	  bottom:0;
   }
-  .hmarket-card > .mdl-card__actions {
+  .hmarket-card-container .mdl-card__actions .hmarket-card > .mdl-card__actions {
 	  display: flex;
 	  box-sizing:border-box;
 	  align-items: center;
+  }
+  .cardLink {
+	  text-align:center;
+	  padding:0.5em;
+	  letter-spacing:0.07em;
+  }
+  .cardLink a {
+	  text-decoration:none;
   }
 
 /* Footer */
@@ -144,6 +170,12 @@
 	}
 	.mdl-mini-footer__social-btn .mdi {
 		font-size:24px; line-height:24px;
+		color:#333;
+	}
+	.mdl-mini-footer__right-section .mdl-button {
+		background-color:#FFF;
+	}
+	.mdl-mini-footer__right-section .mdl-button .mdi {
 		color:#333;
 	}
 	
@@ -227,7 +259,7 @@ p {
 	margin-bottom:16px
 }
 a {
-	color:rgb(255,64,129);
+	/*color:rgb(255,64,129);*/
 	font-weight:500
 }
 blockquote {
