@@ -189,47 +189,31 @@ img {
 /* Product Details */
 .hmarket-details {
 }
+  .hmarket-details .slide-for {
+	  max-width: 300px;
+	  max-height:400px;
+  }
   .hmarket-details .slide-for img {
 	  max-width: 100%;
 	  max-height:400px;
   }
-  .hmarket-details .mdl-card .thumbs {
-	  
-  }
-      .hmarket-details .mdl-card .thumbs .mdl-card {
-	      margin:8px;
-		  min-height:80px;
-      }
-        .hmarket-details .mdl-card .thumb {
-	        margin:4px;
-        }
-        .hmarket-details .mdl-card .thumb img {
-	        max-width: 100%;
-	        max-height:80px;
-        }
   .hmarket-details .mdl-card__title {
 	padding:16px;
   }
   .hmarket-details .mdl-card__title, .hmarket-details .mdl-card__title-text {
 	display:block;
   }
-  .hmarket-details .mdl-card__media {
-  	/*overflow: hidden;*/
-    background: transparent;
-	padding:0; margin:16px;
-	position:relative;
-  }
-  .hmarket-details .mdl-card__media img {
-      max-width: 100%; 
-  }
   .hmarket-details .mdl-card__actions {
 	  padding:16px;
   }
   .hmarket-details .price {
-	  margin:16px 0; padding:4px 0; border-bottom:1px solid #CCC; border-top:1px solid #CCC;
+	  margin:16px 0; padding:4px 0;
   }
     .hmarket-details .price h4 {
 	  margin:0;
+	  color:#2196F3;
+	  position:relative;
+	  left:0;
     }
   .hmarket-details .mdl-card__supporting-text article {
 	  max-height:8em; overflow: hidden; margin-bottom:10px;

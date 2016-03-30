@@ -9,12 +9,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="shortcut icon" href="images/favicon.ico"/>
 <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<script src="https://storage.googleapis.com/code.getmdl.io/1.0.1/material.min.js"></script>
+<!--<script defer src="https://code.getmdl.io/1.1.1/material.min.js"></script>-->
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="assets/mdi/css/materialdesignicons.min.css" media="all" type="text/css" />
 <link rel="stylesheet" href="https://code.getmdl.io/1.1.2/material.blue-indigo.min.css" />
-<script defer src="https://code.getmdl.io/1.1.1/material.min.js"></script>
-<link rel="stylesheet" type="text/css" href="assets/css/slick.css"/>
-<link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css"/>
+<link rel="stylesheet" type="text/css" href="assets/css/mdl-selectfield.min.css"/>
+<link rel="stylesheet" href="assets/css/owl.carousel.css">
+<link rel="stylesheet" href="assets/css/owl.theme.css">
 <link rel="stylesheet" href="assets/css/puremdl-basic.css" />
 </head>
 
@@ -79,29 +81,31 @@
           <div class="mdl-grid">
             <div class="mdl-cell mdl-cell--7-col">
               <!-- Fotos -->
-              <div style="width:100%; border:1px solid #999;">
-                <div class="slider-for">
-                  <div><img src="images/products/cybershot-w380-1.jpg" /></div>
-                  <div><img src="images/products/cybershot-w380-2.jpg" /></div>
-                  <div><img src="images/products/cybershot-w380-3.jpg" /></div>
-                  <div><img src="images/products/cybershot-w380-4.jpg" /></div>
+              <div style="width:100%">
+                <div id="sync1" class="owl-carousel">
+                  <div class="item"><img src="images/products/cybershot-w380-1.jpg" /></div>
+                  <div class="item"><img src="images/products/cybershot-w380-2.jpg" /></div>
+                  <div class="item"><img src="images/products/cybershot-w380-3.jpg" /></div>
+                  <div class="item"><img src="images/products/cybershot-w380-4.jpg" /></div>
                 </div>
-                <div class="slider-nav">
-                  <div><img src="images/products/cybershot-w380-1.jpg" width="100" height="80" /></div>
-                  <div><img src="images/products/cybershot-w380-2.jpg" width="100" height="80" /></div>
-                  <div><img src="images/products/cybershot-w380-3.jpg" width="100" height="80" /></div>
-                  <div><img src="images/products/cybershot-w380-4.jpg" width="100" height="80" /></div>
-              </div>
+                <div id="sync2" class="owl-carousel">
+                  <div class="item"><img src="images/products/cybershot-w380-1.jpg" width="100" height="80" /></div>
+                  <div class="item"><img src="images/products/cybershot-w380-2.jpg" width="100" height="80" /></div>
+                  <div class="item"><img src="images/products/cybershot-w380-3.jpg" width="100" height="80" /></div>
+                  <div class="item"><img src="images/products/cybershot-w380-4.jpg" width="100" height="80" /></div>
+                </div>
               </div>
               
               
             </div>
-            <div class="mdl-card mdl-cell mdl-cell--5-col">
+            <div class="mdl-card mdl-cell mdl-cell--5-col mdl-shadow--2dp">
+              <form>
               <div class="mdl-card__title mdl-card--border">
                 <h2 class="mdl-card__title-text">Nautica Boys' Classic Rashguard Swim Set</h2>
                 <h3 class="mdl-card__subtitle-text"><strong>Brand:</strong> <a href="#">Bonnie Baby</a></h3>
               </div>
               <div class="mdl-card__supporting-text mdl-card--border">
+                
                 <article class="desc">
                   <div><strong>Description:</strong></div>
                   <ul>
@@ -114,28 +118,38 @@
                   </ul>
                 </article>
                 <div class="price">
-                  <div><strong>Price:</strong></div>
-                  <h4>$99</h4>
+                  <h4>USDS $99</h4>
                 </div>
-                <div class="sizes"><strong>Sizes:</strong> 
-                  <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored">S</button>
-                  <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored">M</button>
-                  <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored">L</button>
-                  <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored">XL</button>
+                <div class="sizes">
+                  <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label">
+                    <select class="mdl-selectfield__select" id="sizes" name="sizes">
+                      <option value="" selected></option>
+                      <option value="xs">XS/SS</option>
+                      <option value="s">S</option>
+                      <option value="m">M</option>
+                      <option value="l">L</option>
+                      <option value="xl">XL</option>
+                    </select>
+                    <label class="mdl-selectfield__label" for="sizes">Sizes:</label>
+                    <span class="mdl-selectfield__error">Select a size</span>
+                  </div>
                 </div>
                 <div class="colors">
-                  <div><strong>Colors:</strong></div>
-                  <div>
-                    <select name="orderby" class="mdl-selectfield__select">
+                  <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label">
+                    <select class="mdl-selectfield__select" id="colors" name="colors">
+                      <option value="" selected></option>
                       <option value="Green">Green</option>
                       <option value="Red">Red</option>
                       <option value="Yellow">Yellow</option>
-                      <option value="Pink" selected="">Pink</option>
+                      <option value="Pink">Pink</option>
                     </select>
+                    <label class="mdl-selectfield__label" for="sizes">Colors:</label>
+                    <span class="mdl-selectfield__error">Select a color</span>
                   </div>
                 </div>
-                <div><strong>Product code:</strong> B018SXNJ1W</div>
-                <p><strong>Categories:</strong> <a href="#">Kids</a>, <a href="#">2 pieces</a>, <a href="#">colored</a></p>
+                <p><strong>Product code:</strong> B018SXNJ1W</p>
+                <p><strong>Categories:</strong> <a href="#">Kids</a>, <a href="#">Boys</a></p>
+                <p><strong>Tags:</strong> <a href="#">Kids</a>, <a href="#">2 pieces</a>, <a href="#">colored</a></p>
               </div>
               <div class="mdl-card__actions mdl-card--border">
                 <div>
@@ -151,6 +165,7 @@
                   <i class="material-icons md-18">shopping_cart</i> ADD TO CART
                 </button>
               </div>
+              </form>
             </div>
           </div>
         </div>
@@ -190,35 +205,89 @@
       </div>
     </footer>
   </main>
-  
 </div>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="assets/js/readmore.min.js"></script>
-<script type="text/javascript" src="assets/js/slick.min.js"></script>
+<script src="assets/js/mdl-selectfield.min.js"></script>
+<script src="assets/js/owl.carousel.min.js"></script>
 <script type="text/javascript">
-  $('article.desc').readmore({speed: 500, collapsedHeight:4, blockCSS:'display:inline-block'});
+$('article.desc').readmore({speed: 500, collapsedHeight:4, blockCSS:'display:inline-block'});
+$(document).ready(function() {
+ 
+  var sync1 = $("#sync1");
+  var sync2 = $("#sync2");
+ 
+  sync1.owlCarousel({
+    singleItem : true,
+    slideSpeed : 1000,
+    navigation: true,
+    pagination:false,
+    afterAction : syncPosition,
+    responsiveRefreshRate : 200,
+  });
+ 
+  sync2.owlCarousel({
+    items : 5,
+    itemsDesktop      : [1199,10],
+    itemsDesktopSmall     : [979,10],
+    itemsTablet       : [768,8],
+    itemsMobile       : [479,4],
+    pagination:false,
+    responsiveRefreshRate : 100,
+    afterInit : function(el){
+      el.find(".owl-item").eq(0).addClass("synced");
+    }
+  });
+ 
+  function syncPosition(el){
+    var current = this.currentItem;
+    $("#sync2")
+      .find(".owl-item")
+      .removeClass("synced")
+      .eq(current)
+      .addClass("synced")
+    if($("#sync2").data("owlCarousel") !== undefined){
+      center(current)
+    }
+  }
+ 
+  $("#sync2").on("click", ".owl-item", function(e){
+    e.preventDefault();
+    var number = $(this).data("owlItem");
+    sync1.trigger("owl.goTo",number);
+  });
+ 
+  function center(number){
+    var sync2visible = sync2.data("owlCarousel").owl.visibleItems;
+    var num = number;
+    var found = false;
+    for(var i in sync2visible){
+      if(num === sync2visible[i]){
+        var found = true;
+      }
+    }
+ 
+    if(found===false){
+      if(num>sync2visible[sync2visible.length-1]){
+        sync2.trigger("owl.goTo", num - sync2visible.length+2)
+      }else{
+        if(num - 1 === -1){
+          num = 0;
+        }
+        sync2.trigger("owl.goTo", num);
+      }
+    } else if(num === sync2visible[sync2visible.length-1]){
+      sync2.trigger("owl.goTo", sync2visible[1])
+    } else if(num === sync2visible[0]){
+      sync2.trigger("owl.goTo", num-1)
+    }
+    
+  }
+ 
+});
 </script>
 
-<script type="text/javascript">  
-  $(document).ready(function(){
-    $('.slider-for').slick({
-	  slidesToShow: 1,
-	  slidesToScroll: 1,
-	  arrows: false,
-	  fade: true,
-	  asNavFor: '.slider-nav'
-	});
-	$('.slider-nav').slick({
-	  slidesToShow: 3,
-	  slidesToScroll: 1,
-	  asNavFor: '.slider-for',
-	  dots: false,
-	  centerMode: true,
-	  focusOnSelect: true
-	});
-  });
-</script>
 </body>
 </html>
 
