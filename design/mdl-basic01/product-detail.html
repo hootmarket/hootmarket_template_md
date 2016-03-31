@@ -9,11 +9,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="shortcut icon" href="images/favicon.ico"/>
 <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400italic,700italic,300,700,300italic,400" type="text/css">
 <script src="https://storage.googleapis.com/code.getmdl.io/1.0.1/material.min.js"></script>
 <!--<script defer src="https://code.getmdl.io/1.1.1/material.min.js"></script>-->
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="assets/mdi/css/materialdesignicons.min.css" media="all" type="text/css" />
-<link rel="stylesheet" href="https://code.getmdl.io/1.1.2/material.blue-indigo.min.css" />
+<link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css" />
 <link rel="stylesheet" type="text/css" href="assets/css/mdl-selectfield.min.css"/>
 <link rel="stylesheet" href="assets/css/owl.carousel.css">
 <link rel="stylesheet" href="assets/css/owl.theme.css">
@@ -29,7 +30,7 @@
         <img class="hootmarket-logo-image" src="images/logo-hootmarket.png">
       </span>
       <div class="mdl-layout-spacer"></div>
-      <div class=" mdl-button--accent">
+      <div class="mdl-button--accent">
         <span class="mdl-button mdl-button--icon">
           <i class="material-icons">search</i>
         </span>
@@ -58,7 +59,14 @@
   <main class="mdl-layout__content">
     <a name="top"></a>
     <section class="hmarket-section section">
-      <div style="border-bottom:1px solid #ccc; padding:10px;">Breadcrumbs</div>
+      <div class="mdl-grid mdl-shadow--2dp" style="padding:10px; background-color:#3F51B5;">
+        <div class="mdl-cell" style="color:#FFF;"><a href="#" style="color:#FFF; font-weight:normal;">Home</a> / <a href="#" style="color:#FFF; font-weight:normal;">Category</a> / <span style="color:#FFF; font-weight:bold;">Actual Position</span></div>
+        <div class="mdl-layout-spacer"></div>
+        <div class="mdl-cell mdl-textfield--align-right" style="color:#FFF;">
+          <div style="float:right;"><a href="#" style="color:#FFF; text-decoration:none;"><span class="material-icons md-24 mdl-badge mdl-badge--overlap" data-badge="2">shopping_cart</span></a></div>
+          $<span style="font-size:1.2em; margin-right:10px;"> 198</span>
+        </div>
+      </div>
       <div class="mdl-grid fixed-width">
         <!-- Secondary Navigation -->
         <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--12-col-phone">
@@ -80,25 +88,26 @@
         <div class="hmarket-details mdl-cell mdl-cell--10-col mdl-cell--10-col-tablet mdl-cell--12-col-phone">
           <div class="mdl-grid">
             <div class="mdl-cell mdl-cell--7-col">
-              <!-- Fotos -->
+              <!-- Owl Fotos -->
               <div style="width:100%">
-                <div id="sync1" class="owl-carousel">
-                  <div class="item"><img src="images/products/cybershot-w380-1.jpg" /></div>
-                  <div class="item"><img src="images/products/cybershot-w380-2.jpg" /></div>
-                  <div class="item"><img src="images/products/cybershot-w380-3.jpg" /></div>
-                  <div class="item"><img src="images/products/cybershot-w380-4.jpg" /></div>
+                <div id="sync1" class="owl-carousel mdl-shadow--2dp">
+                  <div class="item"><img src="images/products/cybershot-w380-sq1.jpg" /></div>
+                  <div class="item"><img src="images/products/cybershot-w380-sq2.jpg" /></div>
+                  <div class="item"><img src="images/products/cybershot-w380-sq3.jpg" /></div>
+                  <div class="item"><img src="images/products/cybershot-w380-sq4.jpg" /></div>
+                  <div class="item"><img src="images/products/cybershot-w380-sq5.jpg" /></div>
                 </div>
                 <div id="sync2" class="owl-carousel">
-                  <div class="item"><img src="images/products/cybershot-w380-1.jpg" width="100" height="80" /></div>
-                  <div class="item"><img src="images/products/cybershot-w380-2.jpg" width="100" height="80" /></div>
-                  <div class="item"><img src="images/products/cybershot-w380-3.jpg" width="100" height="80" /></div>
-                  <div class="item"><img src="images/products/cybershot-w380-4.jpg" width="100" height="80" /></div>
+                  <div class="item"><img src="images/products/cybershot-w380-sq1.jpg" /></div>
+                  <div class="item"><img src="images/products/cybershot-w380-sq2.jpg" /></div>
+                  <div class="item"><img src="images/products/cybershot-w380-sq3.jpg" /></div>
+                  <div class="item"><img src="images/products/cybershot-w380-sq4.jpg" /></div>
+                  <div class="item"><img src="images/products/cybershot-w380-sq5.jpg" /></div>
                 </div>
               </div>
-              
-              
+              <!-- End owl -->
             </div>
-            <div class="mdl-card mdl-cell mdl-cell--5-col mdl-shadow--2dp">
+            <div class="mdl-cell mdl-cell--5-col">
               <form>
               <div class="mdl-card__title mdl-card--border">
                 <h2 class="mdl-card__title-text">Nautica Boys' Classic Rashguard Swim Set</h2>
@@ -221,8 +230,9 @@ $(document).ready(function() {
   sync1.owlCarousel({
     singleItem : true,
     slideSpeed : 1000,
-    navigation: true,
+    navigation: false,
     pagination:false,
+	autoHeight:true,
     afterAction : syncPosition,
     responsiveRefreshRate : 200,
   });
