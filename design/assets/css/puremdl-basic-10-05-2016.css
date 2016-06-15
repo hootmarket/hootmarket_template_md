@@ -1,0 +1,569 @@
+/* Generic Styles */
+
+img {
+	border: none;
+}
+form {
+	margin:0; padding:0;
+	display:inline;
+}
+/* Estilos de texto */
+html, body {
+	font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0;
+	padding: 0
+}
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+	font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
+	font-size: 56px;
+	font-weight: 400;
+	line-height: 1.35;
+	letter-spacing: -0.03em;
+	opacity: 0.54;
+	font-size: 0.6em
+}
+h1 {
+	font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
+	font-size: 56px;
+	font-weight: 400;
+	line-height: 1.35;
+	letter-spacing: -0.05em;
+	margin-top: 24px;
+	margin-bottom: 24px
+}
+h2 {
+	font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
+	font-size: 45px;
+	font-weight: 400;
+	letter-spacing: -0.05em;
+	line-height: 48px;
+	margin-top: 24px;
+	margin-bottom: 24px
+}
+h3 {
+	font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
+	font-size: 34px;
+	font-weight: 400;
+	line-height: 40px;
+	margin-top: 24px;
+	margin-bottom: 24px
+}
+h4 {
+	font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 32px;
+	-moz-osx-font-smoothing: grayscale;
+	margin-top: 24px;
+	margin-bottom: 16px
+}
+h5 {
+	font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 1;
+	letter-spacing: 0.02em;
+	margin-top: 24px;
+	margin-bottom: 16px
+}
+h6 {
+	font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	letter-spacing: 0.04em;
+	margin-top: 24px;
+	margin-bottom: 16px
+}
+p {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 24px;
+	letter-spacing: 0;
+	margin-bottom: 16px
+}
+a {
+	/*color:rgb(255,64,129);*/
+	font-weight: 500
+}
+blockquote {
+	font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
+	position: relative;
+	font-size: 24px;
+	font-weight: 300;
+	font-style: italic;
+	line-height: 1.35;
+	letter-spacing: 0.08em
+}
+blockquote:before {
+	position: absolute;
+	left: -0.5em;
+	content: 'â€œ'
+}
+blockquote:after {
+	content: 'â€';
+	margin-left: -0.05em
+}
+/* Iconos */
+/* Rules for sizing the icon. */
+	.material-icons.md-18 {
+		font-size: 18px;
+	}
+	.material-icons.md-24 {
+		font-size: 24px;
+	}
+	.material-icons.md-36 {
+		font-size: 36px;
+	}
+	.material-icons.md-48 {
+		font-size: 48px;
+	}
+	/* Rules for using icons as black on a light background. */
+	.material-icons.md-dark {
+		color: rgba(0, 0, 0, 0.54);
+	}
+	.material-icons.md-dark.md-inactive {
+		color: rgba(0, 0, 0, 0.26);
+	}
+	/* Rules for using icons as white on a dark background. */
+	.material-icons.md-light {
+		color: rgba(255, 255, 255, 1);
+	}
+	.material-icons.md-light.md-inactive {
+		color: rgba(255, 255, 255, 0.3);
+	}
+/* Basic styles for Hootmarket Pure MDL Template */
+.mdl-layout__header /*header-color-overwrite */ {
+	background-color: #FFF;
+}
+	.mdl-layout__header .mdl-layout__drawer-button {
+		color: #000;
+	}
+	.hootmarket-logo-image {
+		max-width: 230px;
+		max-height: 80px;
+	}
+.mdl-layout__drawer .mdl-layout-title {
+	background-color: rgb(63,81,181);
+	color: #FFF;
+}
+.hmarket-header-row-tools {
+	height: 28px;
+	border-bottom: 1px solid #999;
+}
+.mdl-navigation__link {
+	font-size: 14px;
+	font-weight: 700;
+}
+.hmarket-navigation-container {
+	/* Simple hack to make the overflow happen to the left instead... */
+	direction: rtl;
+	-webkit-order: 1;
+	-ms-flex-order: 1;
+	order: 1;
+	width: 500px;
+	transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),  width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hmarket-navigation {
+	/* ... and now make sure the content is actually LTR */
+	direction: ltr;
+	-webkit-justify-content: flex-end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
+	width: 800px;
+}
+.hmarket-search-box.is-focused + .hmarket-navigation-container {
+	opacity: 0;
+	width: 130px;
+}
+.hmarket-navigation .mdl-navigation__link {
+	display: inline-block;
+	height: 60px;
+	line-height: 68px;
+	background-color: transparent !important;
+	border-bottom: 3px solid transparent;
+}
+.hmarket-navigation .mdl-navigation__link:hover {
+	border-bottom: 3px solid #CCC;
+}
+.hmarket-search-box {
+	-webkit-order: 2;
+	-ms-flex-order: 2;
+	order: 2;
+	margin-left: 0;
+	margin-right: 16px;
+}
+.hmarket-search-box .mdl-textfield__input {
+	color:#333;
+}
+.hmarket-more-button {
+	-webkit-order: 3;
+	-ms-flex-order: 3;
+	order: 3;
+}
+.hmarket-drawer-logo-image {
+	height: 20px;
+}
+.hmarket-slide-section .hmarket-title-slide {
+	padding-top: 100px;
+	padding-bottom: 0px;
+	margin: 0;
+	font: 54px/58px "Montserrat", Helvetica, Arial, sans-serif;
+	font-weight: normal;
+}
+.hmarket-slide-section .hmarket-sub-title-slide {
+	padding-top: 10px;
+	margin: 0;
+	margin-bottom: 20px;
+	font: 18px/22px "Montserrat", Helvetica, Arial, sans-serif;
+	font-weight: 500;
+}
+.hmarket-section .fixed-width {
+	max-width: 1366px;
+	margin: 0 auto;
+}
+/* Menú Secundario */
+.hmarket-list {
+}
+.hmarket-list h5 {
+	margin-bottom: 0;
+}
+.hmarket-list ul {
+	margin-top: 0;
+}
+/* Cards */
+.hmarket-card-container {
+}
+	.mdl-card__menu {
+		/*width:32px; height:32px;
+		position:absolute;
+		top:9px; right:9px;
+		z-index:99;*/
+	}
+	.hmarket-card-container .mdl-card__media {
+		overflow: hidden;
+		background: transparent;
+		height: 160px;
+		padding: 0;
+		margin: 16px;
+		position: relative;
+	}
+	.hmarket-card-container .mdl-card__media img {
+		max-width: 100%;
+		max-height: 160px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-ms-transform: translate(-50%, -50%); /* IE 9 */
+		-webkit-transform: translate(-50%, -50%); /* Safari */
+		transform: translate(-50%, -50%);
+	}
+	.hmarket-card-container .mdl-card__title {
+		padding: 0 16px;
+	}
+	.hmarket-card-container .mdl-card__title, .hmarket-card-container .mdl-card__title-text {
+		display: block;
+	}
+	.hmarket-card-container .mdl-card__title a {
+		text-decoration: none;
+	}
+	.hmarket-card-container .mdl-card__supporting-text {
+		padding-bottom: 90px;
+	}
+	.hmarket-card-container .mdl-card__supporting-text .price {
+		font-size:1.2em;
+		font-weight:bold;
+		margin:0 auto;
+		width:90%;
+		text-align:center;
+		position: absolute;
+		bottom: 75px;
+	}
+	.hmarket-card-container .hmarket-card .mdl-card__actions {
+		position: absolute;
+		bottom: 0;
+	}
+	.hmarket-card-container .mdl-card__actions .hmarket-card > .mdl-card__actions {
+		display: flex;
+		box-sizing: border-box;
+		align-items: center;
+	}
+	.hmarket-card-container .cardLink {
+		text-align: center;
+		padding: 0.5em;
+		letter-spacing: 0.07em;
+	}
+	.hmarket-card-container .cardLink a {
+		text-decoration: none;
+	}
+
+/* Cart Info & Actions */
+.cartInfo{
+}
+	.cartInfo .cartTotal {
+		color:#FFF;
+		font-size:1.0em;
+		padding-right:30px;
+	}
+	.cartAction {
+		color:#FFF; 
+		text-decoration:none; 
+		position:absolute; 
+		right:10px;
+	}
+/* Product Details */
+.hmarket-details {
+}
+	#sync1 {
+		margin-bottom: 20px;
+	}
+	#sync1 .item, #sync1 .item img {
+		max-width: 100%;
+	}
+	#sync2 {
+		margin-bottom: 20px;
+		position: relative;
+		display: block;
+		width: 100%;
+		overflow: hidden;
+	}
+	#sync2 .item {
+		margin: 5px;
+		border: 1px solid #CCC;
+	}
+	#sync2 .item img {
+		max-width: 100%;
+	}
+	.hmarket-details .mdl-card__title {
+		padding: 16px;
+	}
+	.hmarket-details .mdl-card__title, .hmarket-details .mdl-card__title-text {
+		display: block;
+	}
+	.hmarket-details .mdl-card__actions {
+		padding: 16px;
+	}
+	.hmarket-details .price {
+		margin: 16px 0;
+		padding: 4px 0;
+	}
+	.hmarket-details .price h4 {
+		margin: 0;
+		color: #2196F3;
+		position: relative;
+		left: 0;
+	}
+	.hmarket-details .mdl-card__supporting-text article {
+		max-height: 8em;
+		overflow: hidden;
+		margin-bottom: 10px;
+	}
+	.hmarket-details .mdl-card__supporting-text article ul, .hmarket-details .mdl-card__supporting-text article p {
+		margin-top: 0;
+		padding-top: 0;
+	}
+	.btn {
+		display: inline-block;
+		padding: 6px 12px;
+		margin-bottom: 0;
+		font-size: 13px;
+		font-weight: normal;
+		line-height: 1.42857;
+		text-align: center;
+		vertical-align: middle;
+		cursor: pointer;
+		border: 1px solid transparent;
+		border-radius: 0;
+		white-space: nowrap;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		-o-user-select: none;
+		user-select: none
+	}
+	.btn:focus {
+		outline: thin dotted #333;
+		outline: 5px auto -webkit-focus-ring-color;
+		outline-offset: -2px
+	}
+	.btn:hover, .btn:focus {
+		color: #333;
+		text-decoration: none
+	}
+	.btn:active, .btn.active {
+		outline: 0;
+		background-image: none;
+		-webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,0.125);
+		box-shadow: inset 0 3px 5px rgba(0,0,0,0.125)
+	}
+	.btn-default {
+		color: #333;
+		background-color: #fff;
+		border-color: #ccc;
+	}
+	.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active {
+		color: #333;
+		background-color: #ebebeb;
+		border-color: #adadad;
+	}
+	#quantity_wanted_p input {
+		border: 1px solid #d6d4d4;
+		border-radius: 0;
+		-webkit-border-radius: 0;
+		color: #555;
+		float: left;
+		font-weight: bold;
+		height: 27px;
+		line-height: 27px;
+		padding: 0 6px;
+		text-align: center;
+		width: 27px;
+		margin-left: 3px;
+	}
+	#quantity_wanted_p .btn {
+		float: left;
+		margin-left: 3px;
+	}
+	#quantity_wanted_p label {
+		display: block;
+		margin-bottom: 7px;
+	}
+	.btn.button-plus, .btn.button-minus {
+		font-size: 14px;
+		line-height: 14px;
+		color: #555;
+		padding: 0;
+		-moz-border-radius: 0;
+		-webkit-border-radius: 0;
+		border-radius: 0
+	}
+	.btn.button-plus span, .btn.button-minus span {
+		display: block;
+		vertical-align: middle;
+		width: 25px;
+		height: 25px;
+		text-align: center;
+		vertical-align: middle;
+		padding: 1px 0;
+		background: #1e5799;
+		background: white
+	}
+	.btn.button-plus:hover, .btn.button-minus:hover {
+		color: #333
+	}
+	.btn.button-plus:hover span, .btn.button-minus:hover span {
+		filter: none;
+		background: #f6f6f6
+	}
+/* Login & Register */
+.mdl-logon .centered {
+	margin:0 auto;
+}
+.mdl-logon .tabTitle {
+	text-align:center;
+	margin-bottom:15px;
+	border-bottom:1px solid #03C;
+}
+	.mdl-logon .tabTitle h4 {
+		margin-top:5px;
+	}
+.mdl-logon .lnkTab {
+	width:100%;
+	text-align:center;
+}
+.mdl-logon .lnkTab .mdl-tabs__tab {
+	float:none;
+	color:#03c;
+	text-decoration:underline;
+	text-transform:none;
+	width:auto;
+	display:inline;
+	padding:0;
+}
+
+/* Footer */
+.mdl-mini-footer {
+	padding-top: 16px;
+	padding-bottom: 16px;
+}
+.mdl-mini-footer__social-btn {
+	background-color: #CCC;
+}
+.mdl-mini-footer__social-btn .mdi {
+	font-size: 24px;
+	line-height: 24px;
+	color: #333;
+}
+.mdl-mini-footer__right-section a {
+	text-decoration: none;
+}
+.mdl-mini-footer__right-section .mdl-button {
+	background-color: #FFF;
+}
+.mdl-mini-footer__right-section .mdl-button .mdi {
+	color: #333;
+}
+/* Modal Dialog */
+.mdl-dialog {
+	border: none;
+	box-shadow: 0 9px 46px 8px rgba(0, 0, 0, 0.14), 0 11px 15px -7px rgba(0, 0, 0, 0.12), 0 24px 38px 3px rgba(0, 0, 0, 0.2);
+	width: 350px; 
+}
+	.mdl-dialog__title {
+		padding: 24px 24px 0;
+		margin: 0;
+		font-size: 2.5rem; 
+	}
+	.mdl-dialog__actions {
+		padding: 8px 8px 8px 24px;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-flex-direction: row-reverse;
+		-ms-flex-direction: row-reverse;
+		flex-direction: row-reverse;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap; 
+	}
+    .mdl-dialog__actions > * {
+		margin-right: 8px;
+		height: 36px; 
+	}
+		.mdl-dialog__actions > *:first-child {
+			margin-right: 0; 
+		}
+	.mdl-dialog__actions--full-width {
+		padding: 0 0 8px 0; 
+	 }
+	.mdl-dialog__actions--full-width > * {
+        height: 48px;
+        -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        padding-right: 16px;
+        margin-right: 0;
+        text-align: center; 
+	}
+	.mdl-dialog__content {
+		padding:0 /*20px 24px 24px 24px*/;
+    	color: rgba(0,0,0, 0.54);
+	}
+	.mdl-dialog-closeButton {
+		position:absolute;
+		right:9px; top:9px;
+	}
+	.mdl-dialog__content .submit {
+		width:100%;
+	}
+	.backdrop {
+		background: rgba(0,0,0, .35);
+	}
+	dialog::backdrop {
+		background: rgba(0,0,0, .35);
+	}
