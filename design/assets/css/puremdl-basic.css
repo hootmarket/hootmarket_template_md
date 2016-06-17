@@ -200,6 +200,7 @@ blockquote:after {
 	max-width: 120px;
   }
 }
+
 /*.hmarket-header-row-tools {
 	height: 28px;
 	border-bottom: 1px solid #999;
@@ -624,7 +625,10 @@ blockquote:after {
 .hmarket-cart .cart-product-row {
 	margin:0; padding:0;
 }
-
+.hmarket-cart img {
+	max-width:60px;
+	height:auto;
+}
 	#quantity_wanted_pinc input {
 		border: 1px solid #d6d4d4;
 		border-radius: 0;
@@ -655,3 +659,46 @@ blockquote:after {
 			width: calc(100% - 32px);
 		}
 	}
+@media only screen and (max-width: 588px) {
+	.hmarket-cart table, .hmarket-cart thead, .hmarket-cart tbody, .hmarket-cart th, .hmarket-cart td, .hmarket-cart tr {
+		display: block;
+	}
+	.hmarket-cart .mdl-data-table {
+		white-space:normal;
+	}
+	.hmarket-cart thead {
+		display: none;
+	}
+	.hmarket-cart .mdl-data-table tbody tr {
+		height: auto;
+	}
+	.hmarket-cart .mdl-data-table tbody td {
+		height: auto;
+	}
+	.hmarket-cart .mdl-data-table td {
+		padding:12px 18px 12px;
+	}
+	.hmarket-cart .mdl-data-table .cart-photo img {
+		max-width:120px;
+		height:auto;
+	}
+	.hmarket-cart .mdl-data-table tbody tr:nth-child(even) {
+		background-color: #eee;
+	}
+	.hmarket-cart .mdl-data-table td,  .mdl-data-table td:first-of-type {
+		padding-left: 40%;
+	}
+	.hmarket-cart .mdl-data-table td:before {
+		position: absolute;
+		top: 6px;
+		left: 6px;
+		width: 35%;
+		padding: 6px 18px 0;
+		white-space:normal;
+		content: attr(data-label);
+		text-align: left;
+	}
+	.hmarket-cart .mdl-data-table td:last-of-type {
+		padding-right: 18px;
+	}
+}
